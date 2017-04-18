@@ -8,7 +8,8 @@
 $(document).ready(function($) {
     $.ajax({
       //接口
-      url:"http://127.0.0.1:3000/api/getindexmenu",
+      url:"http://mmb.ittun.com/api/getindexmenu",
+      type:jsonp,
       success:function(data){
         //渲染模板
         var html = template('navItem', data);
