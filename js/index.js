@@ -9,7 +9,7 @@ $(document).ready(function($) {
     $.ajax({
       //接口
       url:"http://mmb.ittun.com/api/getindexmenu",
-      dataType:jsonp,
+      dataType:"jsonp",
       success:function(data){
         //渲染模板
         var html = template('navItem', data);
