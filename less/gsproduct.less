@@ -1,0 +1,150 @@
+/* header开始 */
+html {
+    font-size: 100px !important;
+}
+body, html {
+    // height: 100%;
+    // padding:0 .1rem;
+}
+body {
+  // max-width: 640rem;
+  min-width: 3rem; /*最小宽度300*/
+  // overflow:hidden;
+}
+.container {
+    width: 100%
+}
+/* 导航开始 */
+div.head{
+  height: .5rem;
+  background: red;
+  line-height: .5rem;
+  padding:0 .1rem;
+  a{
+    display: inline-block;
+    height: .5rem;
+    line-height: .5rem;
+    color:white;
+    font-size:.20rem;
+    img{
+      width: 1.85rem;
+      height: 100%;
+    }
+  }
+  a.title{
+    text-align: center;
+    font-size:.24rem;
+    line-height: .5rem;
+    color:white;
+    overflow:hidden;
+  }
+  a.app{
+    img{
+      width: .34rem;
+      height: .34rem;
+    }
+  }
+}
+
+
+/* header结束 */
+
+/* section 开始 */
+
+.coudan_box{
+  .coudan_head{
+    height: .4rem;
+    border-bottom: 1px solid maroon;
+    position: relative;
+    >ul>li{
+      text-align: center;
+      line-height: .4rem;
+      span{
+        vertical-align: middle;
+      }
+    }
+    .search{
+      line-height: .4rem;
+      padding:0;
+      text-align: center;
+      border-left:1px solid maroon;
+      img{
+        width: 60%;
+        vertical-align: middle;
+
+      }
+    }
+    .list{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top:.41rem;
+      z-index: 10;
+      >div{
+        display:none;
+        /* 开始时全部隐藏，点击时显示 */
+      }
+      li{
+        border-bottom: 1px solid silver;
+        padding:.1rem .15rem;
+        background: white;
+        span{
+          color:red; 
+        }
+      }
+      span.glyphicon-ok{
+        display:none;
+      }
+    }
+  }
+  .coudan_body{
+    ul{
+      li{
+        a{
+          display: block;
+          text-align: center;
+          img{
+            width:80%;
+            height: 2.2rem;
+          }
+        }
+        p{
+          height: .4rem;
+          font-size:.12rem;
+        }
+        span{
+          color:red;
+        }
+      }
+    }
+  }
+}
+/* section 结束 */
+
+
+/* 底部开始 */
+footer{
+  text-align: center;
+  background: #f2f2f2;
+  ul {
+    margin-top: .2rem;
+    li{
+      height: .34rem;
+      line-height: .34rem;
+      float: left;
+      text-align: center;
+      border:1px solid #ddd;
+    }
+  }
+  .bottom{
+    padding: .2rem;
+  }
+}
+/* 固定图片 */
+img.fixImg{
+  position: fixed;
+  height: .68rem;
+  width: .6rem;
+  bottom: .15rem;
+  right: .15rem;
+}

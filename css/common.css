@@ -1,0 +1,76 @@
+/*
+* @Author: my
+* @Date:   2017-04-12 10:50:41
+* @Last Modified by:   my
+* @Last Modified time: 2017-04-12 19:15:35
+*/
+/*公共样式*/
+@charset "utf-8"; /*设置字符集*/
+/*清楚样式*/
+html, body, h1, h2, h3, div, p, span, dl, dt, dd, ul, li, ol, li, input { /*相比用* 效率更高*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+fieldset, img, input, textarea {
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline-style: none; /*去掉获取焦点蓝色线*/
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font: 12px/150% "微软雅黑", Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode */
+}
+
+img, input {
+    border: none;
+
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle; /*清楚图片底部三像素的空白间隙*/
+    /*display:block; 也可以取消底部空白*/
+}
+
+/*公共样式*/

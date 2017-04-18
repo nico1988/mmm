@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>国内折扣商品详情--慢慢买比价网--手机版</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet/less" type="text/css" href="less/inlanddiscount_details.less" /><!-- less引入 -->
+        <script src="lib/less/less.js"></script>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+        <!--[if lt IE 9]>
+        <script src="lib/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+      <!-- 顶部开始 -->
+      <header class="">
+          <div class="container">
+              <div class="row">
+              <div class="head clearfix">
+                  <a href="index.html" class="col-xs-2 glyphicon glyphicon-chevron-left logo"></a>
+                  <a href="index.html" class="title col-xs-8">国内折扣</a>
+                  <a href="#" class="fr app col-xs-2"><img src="images/header_app.png" alt=""></a>
+              </div>
+              <div class="search clearfix">
+                  <input class="sear col-xs-9 fl" type="text" placeholder="请输入您想比价的商品">
+                  <input class="sub fr" type="submit" value="搜索">
+              </div>
+            </div>   
+          </div>       
+      </header>
+     <!-- header结束 -->
+     <!-- 产品分类开始 -->
+     <section>
+       <div class="product_info">
+         <!-- 折扣信息模板 -->
+       </div>
+       <!-- 微信图片 -->
+        <a class="mmb_wx" href=""><img src="images/mmbweixin2.png" height="233" width="594" alt=""></a>
+        <!-- 发表评论 -->
+        <div class="say">
+          <h2>发表评论</h2>
+          <div class="text_area">
+            <textarea name="" id="" ></textarea>
+            <input class="deliver" type="button" value="发表评论">
+          </div>
+          <h2>最新评论</h2>
+        </div>
+
+     </section>
+     <!-- 产品分类结束 -->
+      <!-- 底部开始 -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <ul class="clearfix">
+            <li class="col-xs-4">登录</li>
+            <li class="col-xs-4">注册</li>
+            <li class="col-xs-4"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</li>
+            </ul>
+            <div class="bottom clearfix">
+               <a href="http://m.manmanbuy.com/?o=download" style="color:red;">手机APP下载</a>
+               <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+              <div><a href="">m.manmanbuy.com</a></div>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+      <img class = "fixImg" src="images/fix.png" alt="">
+    </body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+   <!-- 折扣信息模板 -->
+   <script id="medialist" type="text/html">
+    {{each result as value i}}
+      <div class="media_discount">
+        <h2>{{value.productName}}</h2>
+        <span style="color:orange">{{value.productPinkage}}</span>
+        <br>
+
+        <a href=""><span class="time">{{value.productFrom}}</span></a>{{value.productTime}}
+        <a href=""><span class="glyphicon glyphicon-comment fr">{{value.productComCount.slice(1,2)}}</span></a>
+        <br/>
+        <a class="fr img_sm" href="">{{#value.productImgSm}}</a>
+        <p>{{value.productInfo2}}</p>
+        <p>{{value.productInfo1}}</p>
+        <a class="img_lg" href="">{{#value.productImgLg}}</a>
+      </div>
+    {{/each}}
+  </script>
+  <script src="js/inlanddiscount_details.js"></script>
+</html>

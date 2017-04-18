@@ -1,0 +1,111 @@
+/* header开始 */
+html {
+    font-size: 100px !important;
+}
+body, html {
+    // height: 100%;
+    // padding:0 .1rem;
+}
+
+body {
+  // max-width: 640rem;
+  min-width: 3rem; /*最小宽度300*/
+}
+.container {
+    width: 100%
+}
+/* 导航开始 */
+div.head{
+  height: .5rem;
+  background: #ff841d;
+  line-height: .5rem;
+  padding:0 .1rem;
+  a{
+    display: inline-block;
+    height: .5rem;
+    line-height: .5rem;
+    color:white;
+    font-size:.20rem;
+    img{
+      width: 1.85rem;
+      height: 100%;
+    }
+  }
+  a.title{
+  text-align: center;
+  font-size:.24rem;
+  line-height: .5rem;
+  color:white;
+  }
+  a.app{
+    img{
+      width: .34rem;
+      height: .34rem;
+    }
+  }
+}
+
+/* header结束 */
+
+/* section 开始 */
+/* 折扣商品信息 */
+section{
+  overflow:hidden;//清除底部影响
+  #product_list{
+    .product::odd{
+      border-right: none;
+        
+    };
+    .product{
+      border-bottom: 1px solid silver;
+      border-right: 1px solid silver;
+      height: 2.8rem;
+      background: white;
+
+      h3{
+        font-size:.16rem;
+        margin-top: 0;
+        height: .5rem;
+      }
+      a.img{
+        display: block;
+        text-align: center;
+        padding: .1rem;
+        
+        img{
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+      }
+    }
+  }
+}
+/* 折扣商品信息 */
+/* section 结束 */
+
+/* 底部开始 */
+footer{
+  text-align: center;
+  background: #f2f2f2;
+  ul {
+    margin-top: .2rem;
+    li{
+      height: .34rem;
+      line-height: .34rem;
+      float: left;
+      text-align: center;
+      border:1px solid #ddd;
+    }
+  }
+  .bottom{
+    padding: .2rem;
+  }
+}
+/* 固定图片 */
+img.fixImg{
+  position: fixed;
+  height: .68rem;
+  width: .6rem;
+  bottom: .15rem;
+  right: .15rem;
+}

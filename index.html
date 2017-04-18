@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>慢慢买比价网--手机版</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet/less" type="text/css" href="less/index.less" /><!-- less引入 -->
+        <script src="lib/less/less.js"></script>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+        <!--[if lt IE 9]>
+        <script src="lib/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+      <!-- 顶部开始 -->
+      <header class="">
+          <div class="container">
+              <div class="row">
+              <div class="head clearfix">
+                  <a href="#" class="fl logo"><img src="images/header_logo.png" alt=""></a>
+                  <a href="#" class="fr app"><img src="images/header_app.png" alt=""></a>
+              </div>
+              <div class="search clearfix">
+                  <input class="sear col-xs-9 fl" type="text" placeholder="请输入您想比价的商品">
+                  <input class="sub fr" type="submit" value="搜索">
+              </div>
+            </div>   
+          </div>       
+      </header>
+      <!-- 主体区域 -->
+      <div class="main" >
+        <!-- 导航按钮区域 -->
+        <div class="container">
+          <div class="row">
+            <div class="navItems" id="navlist"></div>             
+          </div>
+        </div>
+        <!-- 超值折扣推荐 -->
+        <div class="container">
+          <div class="row recommend">
+              <div class="clearfix">
+                <span class="fl sales">超值折扣推荐</span>
+                <a href="#">
+                  <span class="glyphicon glyphicon-play-circle fr more"></span>
+                </a>
+              </div>
+              <div class="goods">
+                <ul class="goodList" id="goodList">
+                  
+                </ul>
+                <div class="moreInfo">
+                  <a href="javascript:;">更多优惠信息 》</a></div>
+              </div>
+              <div class="range clearfix">
+                <span class="white fl">品牌排行</span>
+                <span class="fr"><img src="images/more.png" alt=""></span>
+              </div>
+          </div>  
+        </div>              
+      </div>
+      <!-- 底部开始 -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <ul class="clearfix">
+            <li class="col-xs-4">登录</li>
+            <li class="col-xs-4">注册</li>
+            <li class="col-xs-4"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</li>
+            </ul>
+            <div class="bottom clearfix">
+               <a href="http://m.manmanbuy.com/?o=download" style="color:red;">手机APP下载</a>
+               <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+              <div><a href="">m.manmanbuy.com</a></div>
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+      <img class = "fixImg" src="images/fix.png" alt="">
+    </body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<!-- 导航模板引擎 -->
+<script id="navItem" type="text/html">
+  {{each result as value i}}
+    <div class="col-xs-3 fl">
+      <a href="{{value.titlehref}}">{{#value.img}}</a>
+      <p>{{value.name}}</p>
+    </div>
+  {{/each}}
+</script>
+<!-- 模板引擎 -->
+<script id="productItem" type="text/html">
+  {{each result as value i}}
+    <li class="clearfix goods_item">
+      <div class="fl itemImg">
+        <a href="#">
+          {{#value.productImgSm}}
+        </a>
+      </div>
+      <div class="content">
+        <div class="title">{{value.productName}}<span class="red"> {{value.productPinkage}}</span> </div>
+        <span class="left">{{value.productFrom}}{{value.productTime}}</span>
+        <div class="fr">
+          <span class="comments glyphicon glyphicon-comment"></span>
+          <span >{{value.productComCount.slice(1,2)}}</span>
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</script>
+
+
+
+<script src="js/index.js"></script>
+  
+</html>

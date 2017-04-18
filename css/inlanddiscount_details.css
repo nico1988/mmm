@@ -1,0 +1,147 @@
+/* header开始 */
+html {
+  font-size: 100px !important;
+}
+body {
+  min-width: 3rem;
+  /*最小宽度300*/
+}
+.container {
+  width: 100%;
+}
+/* 导航开始 */
+div.head {
+  height: .5rem;
+  background: #ff841d;
+  line-height: .5rem;
+  padding: 0 .1rem;
+}
+div.head a {
+  display: inline-block;
+  height: .5rem;
+  line-height: .5rem;
+  color: white;
+  font-size: .20rem;
+}
+div.head a img {
+  width: 1.85rem;
+  height: 100%;
+}
+div.head a.title {
+  text-align: center;
+  font-size: .24rem;
+  line-height: .5rem;
+  color: white;
+}
+div.head a.app img {
+  width: .34rem;
+  height: .34rem;
+}
+div.search {
+  height: .5rem;
+  line-height: .5rem;
+  padding-top: .1rem;
+  padding-right: 1rem;
+  position: relative;
+  border-bottom: 2px solid #f1f1f1;
+}
+div.search input.sear {
+  height: .3rem;
+  width: 100%;
+  background: #f1f1f1;
+  border-radius: .2rem;
+  margin-left: .1rem;
+}
+div.search input.sub {
+  position: absolute;
+  right: 0;
+  width: 1rem;
+  height: .3rem;
+  line-height: .3rem;
+  border-radius: .2rem;
+  background: #ff841d;
+  margin-right: .2rem;
+}
+/* header结束 */
+/* section 开始 */
+/* 折扣信息 */
+section .media_discount {
+  padding: .15rem;
+  border-bottom: 1px solid silver;
+  z-index: 2;
+  font-size: .20rem;
+}
+section .media_discount a.img_sm {
+  display: block;
+  height: 2rem;
+  width: 1.5rem;
+}
+section .media_discount a.img_sm img {
+  height: 2rem;
+  width: 1.5rem;
+}
+section .media_discount p {
+  margin-top: .1rem;
+  overflow: hidden;
+  text-indent: .32rem;
+}
+section .media_discount a.img_lg {
+  display: block;
+  text-align: center;
+}
+section a.mmb_wx {
+  display: block;
+}
+section a.mmb_wx img {
+  width: 100%;
+}
+section .say {
+  padding: .15rem;
+}
+section .say .text_area {
+  position: relative;
+}
+section .say .text_area textarea {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid silver;
+  font-size: .2rem;
+  padding: .1rem;
+}
+section .say .text_area input.deliver {
+  position: absolute;
+  bottom: .05rem;
+  right: 0;
+  padding: .1rem;
+  background: orange;
+  color: white;
+  text-align: center;
+}
+/* 折扣信息 */
+/* section 结束 */
+/* 底部开始 */
+footer {
+  text-align: center;
+  background: #f2f2f2;
+}
+footer ul {
+  margin-top: .2rem;
+}
+footer ul li {
+  height: .34rem;
+  line-height: .34rem;
+  float: left;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+footer .bottom {
+  padding: .2rem;
+}
+/* 固定图片 */
+img.fixImg {
+  position: fixed;
+  height: .68rem;
+  width: .6rem;
+  bottom: .15rem;
+  right: .15rem;
+}

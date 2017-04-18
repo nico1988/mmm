@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>品牌大全--慢慢买</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet/less" type="text/css" href="less/brandTitle.less" /><!-- less引入 -->
+  <script src="lib/less/less.js"></script>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/animate.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+        <!--[if lt IE 9]>
+        <script src="lib/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+      </head>
+      <body>
+        <!-- 顶部开始 -->
+        <header class="">
+          <div class="container">
+            <div class="row">
+              <div class="head clearfix">
+                <a href="index.html" class="fl logo"><img src="images/header_logo.png" alt=""></a>
+                <a href="#" class="fr app"><img src="images/header_app.png" alt=""></a>
+              </div>
+              <div class="search clearfix">
+                <input class="sear col-xs-9 fl" type="text" placeholder="请输入您想比价的商品">
+                <input class="sub fr" type="submit" value="搜索">
+              </div>
+            </div>   
+          </div>       
+        </header>
+        <!-- header结束 -->
+        <!-- 分类列表开始 -->
+        <section>
+         <div class="container">
+           <div class="row">
+           <!-- 路径导航 -->
+            <ol class="breadcrumb">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="brandTitle.html">全部分类</a></li>
+            </ol>
+            <div class="brand_range">
+              <div class="title"></div>
+            <!-- 模板 -->
+              <ul>
+    
+              </ul>
+            <!-- 模板 -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 详情页结束 -->
+      <!-- 底部开始 -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <ul class="clearfix">
+              <li class="col-xs-4">登录</li>
+              <li class="col-xs-4">注册</li>
+              <li class="col-xs-4"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</li>
+            </ul>
+            <div class="bottom clearfix">
+             <a href="http://m.manmanbuy.com/?o=download" style="color:red;">手机APP下载</a>
+             <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+             <div><a href="">m.manmanbuy.com</a></div>
+           </div>
+         </div>
+       </div>
+
+     </footer>
+     <img class = "fixImg" src="images/fix.png" alt="">
+   </body>
+   <script src="lib/jquery/jquery.min.js"></script>
+   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+   <script src="lib/template.js"></script>
+   <!-- 模板 -->
+    <script id="brand_title" type="text/html">
+      {{each result as value i}}
+        <li class="clearfix" data-brandtitleId={{value.brandTitleId}} data-categoryid={{value.categoryId}}>{{value.brandTitle}}</span><span class="fr glyphicon glyphicon-menu-down"></li>
+      {{/each}}
+    </script>
+    <!-- 十大品牌模板 -->
+    <script id="top10" type="text/html">
+      {{each result as value i}}
+        <li class="clearfix" data-brandtitleId={{value.brandTitleId}} data-categoryid={{value.categoryId}}><span class="fl number">{{value.brandId+1}}</span><span class="fr top10 glyphicon glyphicon-menu-down"></span><div class="tab_title">{{value.brandName}}</div><div>{{value.brandInfo}}</div></li>
+      {{/each}}
+    </script>
+    <!-- 品牌销量排行 -->
+    <script id="sales_range" type="text/html">
+      {{each result as value i}}
+        <li class="clearfix sales" data-brandtitleId={{value.brandTitleId}}>
+          <a href="#" class="img">{{#value.productImg}}</a>
+          <div class="content">
+              <h3>{{value.productName}}</h3>
+              <p><span class="price">{{value.productPrice}}</span></p>
+              <div><span class="quote">{{value.productQuote}} </span><span> {{value.productCom}}</span></div>
+          </div>
+        </li>
+      {{/each}}
+    </script>
+    <script src="js/brandTitle.js"></script>
+</html>

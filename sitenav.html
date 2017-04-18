@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>凑单品-慢慢买比价网--手机版</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" type="text/css" href="less/sitenav.less" /><!-- less引入 -->
+    <script src="lib/less/less.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <!-- 顶部开始 -->
+  <header class="clearfix" id="toph">
+      <div class="container">
+        <div class="row">
+          <div class="head clearfix">
+              <a href="index.html" class="col-xs-2 glyphicon glyphicon-chevron-left logo goback"></a>
+              <a href="#" class="title col-xs-8">商场导航</a>
+              <a href="#" class="fr app col-xs-2"><img src="images/header_app.png" alt=""></a>
+          </div>
+        </div>   
+      </div>       
+  </header>
+ <!-- header结束 -->
+ <!-- section开始 -->
+<section class="clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="sites">
+        <ul class="clearfix">
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+ <!-- section结束 -->
+<!-- 底部开始 -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <ul class="clearfix">
+      <li class="col-xs-4">登录</li>
+      <li class="col-xs-4">注册</li>
+      <li class="col-xs-4 totop"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</li>
+      </ul>
+      <div class="bottom clearfix">
+         <a href="http://m.manmanbuy.com/?o=download" style="color:red;">手机APP下载</a>
+         <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+        <div><a href="">m.manmanbuy.com</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<img class = "fixImg" src="images/fix.png" alt="">
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<!-- 网址导航模板 -->
+<script type="text/html" id="nav_list">
+  {{each result as value i}}
+    <li><a href="{{value.navHref}}"><img src="{{value.navImg}}" alt="">{{value.navTitle}}</a></li>
+  {{/each}}
+</script>
+<script src="js/sitenav.js"></script>
+</html>
+
